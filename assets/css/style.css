@@ -24,7 +24,11 @@ borda darkmode: #9fb1c7
 
 /* Fontes */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap");
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Zen Loop', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Poppins:wght@100;200;300;400&family=Zen+Loop:ital@1&display=swap');
 
 /*GERAL*/
 html,
@@ -50,7 +54,7 @@ main {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
 }
 
@@ -122,6 +126,8 @@ main .column-right {
   width: 100%;
   max-width: 160px;
   border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 20px 30px;
+  border: 1px outset #ddd;
 }
 
 .contact-info-description {
@@ -130,6 +136,17 @@ main .column-right {
 }
 .contact-info-description h1 {
   font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.contact-info-description h1.full-name {
+  display: none;
+}
+.names:hover h1.name {
+  display: none;
+}
+.names:hover h1.full-name {
+  display: block;
+  margin-bottom: .3rem;
 }
 .contact-info-description h2 {
   font-weight: normal;
@@ -145,6 +162,11 @@ main .column-right {
 .contact-info-description ul li a {
   font-size: 14px;
   color: inherit;
+  cursor: pointer;
+}
+.contact-info-description ul li a:hover {
+  text-decoration: underline;
+  color: aqua;
 }
 .info-about {
   margin-bottom: 35px;
@@ -214,6 +236,8 @@ main section p.active {
     filter: invert(0%) sepia(6%) saturate(20%) hue-rotate(244deg)
     brightness(109%) contrast(97%);
 }
+
+
 /* .contact-info-switch {
   margin-top: 30px;
 }
