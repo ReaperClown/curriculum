@@ -28,7 +28,7 @@ borda darkmode: #9fb1c7
 font-family: 'Poppins', sans-serif;
 font-family: 'Zen Loop', cursive; */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Poppins:wght@100;200;300;400&family=Zen+Loop:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Poppins:wght@100;200;300;400&family=Zen+Loop:ital@1&display=swap");
 
 /*GERAL*/
 html,
@@ -54,7 +54,7 @@ main {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
 }
 
@@ -80,7 +80,7 @@ main {
 .social {
   filter: invert(90%) sepia(6%) saturate(20%) hue-rotate(244deg)
     brightness(109%) contrast(97%);
-    transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 /* BODY */
@@ -146,7 +146,7 @@ main .column-right {
 }
 .names:hover h1.full-name {
   display: block;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 .contact-info-description h2 {
   font-weight: normal;
@@ -233,10 +233,9 @@ main section p.active {
 }
 
 .social.active {
-    filter: invert(0%) sepia(6%) saturate(20%) hue-rotate(244deg)
-    brightness(109%) contrast(97%);
+  filter: invert(0%) sepia(6%) saturate(20%) hue-rotate(244deg) brightness(109%)
+    contrast(97%);
 }
-
 
 /* .contact-info-switch {
   margin-top: 30px;
@@ -270,12 +269,29 @@ main section p.active {
 section {
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #171718;
+  box-shadow: 0px 24px 3px -24px #171718;
   transition: all 0.3s ease-in-out 0s;
 }
 section h2 {
   font-size: 1.3rem;
   margin-bottom: 10px;
+  text-decoration: underline;
+}
+section h4 {
+  font-size: 1rem;
+}
+section h3 {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  text-shadow: 3px -1px 14px rgba(18, 18, 19, 0.493);
+}
+section h6 b {
+  font-size: 0.9rem;
+  margin-right: 0.4rem;
+  text-decoration: underline;
+}
+section h6 {
+  font-size: 0.8rem;
 }
 section p {
   font-size: 14px;
@@ -299,6 +315,10 @@ section ul li strong {
   font-size: 14px;
 }
 
+.end {
+  margin-left: 0.4rem;
+}
+
 .portfolio {
 }
 .portfolio-profile {
@@ -309,13 +329,22 @@ section ul li strong {
 }
 
 .portfolio-skills {
+  /* text-align: center; */
 }
 .portfolio-skills h2 {
 }
 .portfolio-skills ul {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
 }
-.portfolio-skills ul li {
+.list2 {
+  margin-left: 5rem;
 }
+/* .portfolio-skills ul li {
+  display: inline-grid;
+  grid-template-columns: 3fr 0fr 0fr 1fr;
+} */
 .portfolio-skills ul li p {
 }
 
@@ -373,9 +402,9 @@ section ul li strong {
     flex-flow: row wrap;
   }
   main .column-left {
-    flex-basis: 34%;
+    flex-basis: 38%;
   }
   main .column-right {
-    flex-basis: 66%;
+    flex-basis: 62%;
   }
 }
