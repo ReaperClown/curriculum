@@ -141,12 +141,8 @@ main .column-right {
 .contact-info-description h1.full-name {
   display: none;
 }
-.names:hover h1.name {
+.contact-info-description h2.full-role{
   display: none;
-}
-.names:hover h1.full-name {
-  display: block;
-  margin-bottom: 0.3rem;
 }
 .contact-info-description h2 {
   font-weight: normal;
