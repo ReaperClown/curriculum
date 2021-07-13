@@ -32,4 +32,32 @@ $(document).ready(function () {
     $(".roles h2.full-role").css("display", "none")
 
   });
+  $(".icon").click(function () {
+      let x = document.getElementById("myNav");
+      let u = document.getElementById("lang-switch");
+      let d = document.getElementById("divider");
+      if (x.className === "nav" && u.className === "lang-switch" && d.className === "divider") {
+        x.className += " responsive";
+        u.className += " active";
+        d.className += " active";
+      } else {
+        x.className = "nav";
+        u.className = "lang-switch";
+        d.className = "divider";
+      }
+  });
+  $("a.lang-pt").click(function () {
+      $(".lang-pt").css("display", "none")
+      $(".country-br").css("display","none")
+
+      $(".lang-en").css("display","block")
+      $(".country-us").css("display","block")
+  });
+  $("a.lang-en").click(function () {
+    $(".lang-en").css("display", "none")
+    $(".country-us").css("display","none")
+
+    $(".lang-pt").css("display","block")
+    $(".country-br").css("display","block")
+});
 });
