@@ -5,7 +5,7 @@ var dictionary = {
     "en": "Front-End Developer",
   },
 };
-var langs = ["pt-br", "en"];
+var langs = ["pt-br", "en", "sobre", "about"];
 var current_lang_index = 0;
 var current_lang = langs[current_lang_index];
 
@@ -56,3 +56,22 @@ function translate() {
 }
 
 translate();
+
+$(document).ready(function () {
+  var counter = 1;
+$(".lang-switch").click(function () {
+  if (counter == 1) {
+    $(".pt").css("display", "none")
+    $(".en").css("display", "block")
+    document.title = "Resumé - Willian Mesquita"
+
+    counter = 2;
+  } else if (counter == 2) {
+    $(".en").css("display", "none")
+    $(".pt").css("display", "block")
+    document.title = "Currículo - Willian Mesquita"
+
+    counter = 1;
+  }
+});
+});
