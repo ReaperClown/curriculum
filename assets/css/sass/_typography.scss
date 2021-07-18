@@ -15,9 +15,40 @@ a {
   text-decoration: none;
 }
 
+.fa-chevron-right.fa-xs {
+  display: none;
+}
+
+.mail {
+
+  &:hover {
+    .fa-chevron-right.fa-xs {
+      display: inline;
+      padding: 8px 8px;
+      font-size: 1.2rem;
+      vertical-align: middle;
+    }
+  }
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 0;
+}
+  50% {
+  opacity: 1;
+}
+  100% {
+    opacity: 0;
+  }
+}
+
+
 .link {
   padding: 8px 24px;
   font-size: 24px;
+
+  display: inline-block;
 
   transition: 0.5s ease;
 
@@ -64,6 +95,37 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  .info {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 48px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 48px !important;
+    transform: translateX(5vw);
+    margin-bottom: -15%;
+  }
+  h2 {
+    font-size: 36px !important;
+  }
+  .info {
+    font-size: 28px !important;
+    margin-left: 1%;
+  }
+  h3 {
+    font-size: 28px !important;
+  }
+}
+
 h2 {
   font-size: 72px;
   line-height: 110%;
@@ -90,9 +152,10 @@ h6 {
 }
 
 .mask {
-  background: linear-gradient(225deg, #2dc7ed 0%, #538bf0 100%);
+  background: linear-gradient(225deg, #00ffd5 30%, #32fa00 100%);
 
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -114,13 +177,18 @@ h6 {
 
   position: relative;
 
+  opacity: 0.8;
+
   &::after {
     content: "";
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
 
     position: absolute;
     top: 0;
     left: 0;
+
+    margin-left: 2%;
 
     z-index: -1;
 
@@ -129,15 +197,29 @@ h6 {
 
     transform: translate(0%, -15%) rotate(45deg);
 
-    background: linear-gradient(225deg, #2dc7ed 0%, rgba(83, 139, 240, 0) 100%);
+    background: linear-gradient(13deg, #0bca14ad 14%, rgb(0, 0, 0) 100%);
 
     border-radius: 4px;
     transition: 0.5s ease;
+
+    animation: spin 3s linear infinite;
   }
 
   &:hover {
     &::after {
-      transform: translate(0%, -15%) rotate(120deg);
+      animation: spin 200ms linear infinite;
     }
   }
+}
+
+@media screen and (max-width: 375px) {
+  .works {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes spin {
+  0% { transform: translate(0%, -15%) rotate(45deg); }
+  50% { transform: translate(0%, -15%) rotate(50deg); }
+  100% { transform: translate(0%, -15%) rotate(45deg); }
 }

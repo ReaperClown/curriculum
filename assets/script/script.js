@@ -1,3 +1,86 @@
+document.addEventListener('DOMContentLoaded', () => {
+  var tl = gsap.timeline();
+
+  tl
+  .from(".menu-1", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      delay: 0.5,
+      ease: "power3.out",
+  })
+  .from(".menu-2", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power3.out",
+  }, "-=0.8")
+  .from(".menu-3", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power3.out",
+  }, "-=0.8")
+  .from(".menu-4", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power3.out",
+  }, "-=0.8")
+  .from(".main-logo", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power3.out",
+  }, "-=0.8")
+  .from(".container-item div", {
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      stagger: {each: 0.2},
+      ease: "power3.out",
+  }, "-=0.8")
+  .from(".container-item img", {
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      ease: "power3.out",
+  }, "-=0.8")
+  .from(".bg-hero", {
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      ease: "power3.out",
+  }, "-=0.8")
+
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from("#section-1 div",{
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      stagger: {each: 0.2},
+      ease: "power3.out",
+      scrollTrigger: {
+          trigger: "#section-1",
+
+      }
+  });
+
+  gsap.from("#section-2 div",{
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      stagger: {each: 0.2},
+      ease: "power3.out",
+      scrollTrigger: {
+          trigger: "#section-2",
+
+      }
+  });
+});
+
 $(document).ready(function () {
   $(".toggleDark").click(function () {
     $(".background").toggleClass("active");
@@ -7,13 +90,13 @@ $(document).ready(function () {
     $(".social").toggleClass("active");
 
     if ($(this).is(":checked"))
-      $("section").css("box-shadow", "0px 24px 3px -24px #d9e2ee"),
+      $("section.main-content").css("box-shadow", "0px 24px 3px -24px #d9e2ee"),
         $(".contact-info-image img").css(
           "box-shadow",
           "rgba(255, 255, 255, 0.2) 0px 20px 30px"
         );
     else
-      $("section").css("box-shadow", "0px 24px 3px -24px #171718"),
+      $("section.main-content").css("box-shadow", "0px 24px 3px -24px #171718"),
         $(".contact-info-image img").css(
           "box-shadow",
           "rgba(0, 0, 0, 0.9) 0px 20px 30px"
@@ -60,4 +143,15 @@ $(document).ready(function () {
     $(".lang-pt").css("display","block")
     $(".country-br").css("display","block")
 });
+});
+
+$(function () {
+  $('#mail').on('click', function (event) {
+      event.preventDefault();
+    alert("Huh");
+    var email = 'test@theearth.com';
+    var subject = 'Circle Around';
+    var emailBody = 'Some blah';
+    window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +   emailBody;
+  });
 });
