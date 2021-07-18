@@ -108,7 +108,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   h1 {
     font-size: 48px !important;
     transform: translateX(5vw);
@@ -212,7 +212,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .works {
     transform: translateX(50%);
   }

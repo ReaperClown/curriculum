@@ -119,7 +119,7 @@ h1 {
     font-size: 48px !important;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   h1 {
     font-size: 48px !important;
     -webkit-transform: translateX(5vw);
@@ -218,7 +218,7 @@ h6 {
           animation: spin 200ms linear infinite;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .works {
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
@@ -888,6 +888,14 @@ header {
     display: none;
   }
 }
+@media screen and (max-width: 1200px) {
+  .menu {
+    width: 75%;
+    -webkit-transform: translateX(18%);
+        -ms-transform: translateX(18%);
+            transform: translateX(18%);
+  }
+}
 body::-webkit-scrollbar {
   width: 13px;
   height: 13px;
@@ -939,7 +947,7 @@ body::-webkit-scrollbar-track {
     margin-left: -9%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .menu {
     position: relative;
     padding: 0;
@@ -1089,7 +1097,7 @@ body::-webkit-scrollbar-track {
     display: none;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .container-item:nth-child(1) {
     margin-left: -25%;
   }
@@ -1140,7 +1148,7 @@ body::-webkit-scrollbar-track {
             transform: scale(2) rotate(25deg);
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .menu {
     padding: 0;
   }
