@@ -12,6 +12,49 @@
 }
 
 @media screen and (max-width: 960px) {
+  .menu.active {
+    align-items: center;
+    display: flex;
+    justify-content: inherit;
+    flex-direction: column;
+    padding: inherit;
+    z-index: 1;
+    background: rgba(22, 21, 21, 0.979);
+    height: 350px;
+    position: fixed;
+    transform: translateX(0%);
+    width: 100%;
+  }
+  .menu.active .menu-logo {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-left.active {
+    display: grid;
+    grid-template-columns: repeat(1, 0.1fr);
+    grid-template-rows: repeat(1, 0.1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 25px;
+  }
+  .menu-right.active {
+    display: grid;
+    grid-template-columns: repeat(1, 0.1fr);
+    grid-template-rows: repeat(1, 0.1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .menu-left.active a, .menu-right.active a {
+    padding: 12px 0px;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .menu-left {
     display: none;
   }
@@ -69,10 +112,13 @@ body::-webkit-scrollbar-track {
   .menu {
     position: absolute;
   }
+}
+
+@media screen and (max-width: 960px) {
   .menu-logo {
-    float: left;
-    margin-top: -5%;
-    margin-left: -9%;
+      display: block;
+      margin: 0 auto;
+      margin-top: -55px;
   }
 }
 
@@ -86,6 +132,7 @@ body::-webkit-scrollbar-track {
     position: relative;
     margin: 0 auto;
     margin-top: -5%;
+    transform: scale(0.2) translateX(8vw);
   }
 }
 

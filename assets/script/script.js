@@ -1,4 +1,10 @@
 var counter = 1;
+const toggleButton = document.getElementsByClassName('main-logo')[0]
+const navbar = document.getElementsByClassName('menu')[0]
+const navbarLeft = document.getElementsByClassName('menu-left')[0]
+const navbarRight = document.getElementsByClassName('menu-right')[0]
+
+
 document.addEventListener('DOMContentLoaded', () => {
   var tl = gsap.timeline();
 
@@ -83,6 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 $(document).ready(function () {
+  $(".menu-logo").on("click", function(){
+    $(".menu-left").toggleClass("active")
+    $(".menu-right").toggleClass("active")
+    $(".menu").toggleClass("active")
+    $(".main-logo").css("animation", "none")
+
+    // navbarLeft.classList.toggle('active')
+    // navbarRight.classList.toggle('active')
+});
+
   $(".toggleDark").click(function () {
     $("body").toggleClass("active");
     $(".contact-info-description").toggleClass("active");
@@ -116,13 +132,13 @@ $(document).ready(function () {
 
   });
 
-  document.querySelector("label[for=nav-icon] > a")
-  .onclick = function(e) {
-    var el = document.getElementById(
-      this.parentElement.htmlFor
-    );
-    el.checked = !el.checked;
-  }
+  // document.querySelector("label[for=nav-icon] > a")
+  // .onclick = function(e) {
+  //   var el = document.getElementById(
+  //     this.parentElement.htmlFor
+  //   );
+  //   el.checked = !el.checked;
+  // }
 
   $(".hover").on("mouseenter", ".names",".roles", function () {
     $(".names h1.name").css("display", "none"),

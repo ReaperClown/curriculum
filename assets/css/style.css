@@ -97,13 +97,21 @@ h1 {
   line-height: 100%;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1366px) {
   h1 {
-    font-size: 64px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  .info {
+    font-size: 52px;
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 64px !important;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -117,6 +125,15 @@ h1 {
 
   h2 {
     font-size: 48px !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 48px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -880,6 +897,69 @@ header {
 }
 
 @media screen and (max-width: 960px) {
+  .menu.active {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: inherit;
+    z-index: 1;
+    background: rgba(22, 21, 21, 0.979);
+    height: 350px;
+    position: fixed;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 100%;
+  }
+
+  .menu.active .menu-logo {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 50;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .menu-left.active {
+    display: grid;
+    grid-template-columns: repeat(1, 0.1fr);
+    grid-template-rows: repeat(1, 0.1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 25px;
+  }
+
+  .menu-right.active {
+    display: grid;
+    grid-template-columns: repeat(1, 0.1fr);
+    grid-template-rows: repeat(1, 0.1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .menu-left.active a, .menu-right.active a {
+    padding: 12px 0px;
+  }
+}
+@media screen and (max-width: 960px) {
   .menu-left {
     display: none;
   }
@@ -940,11 +1020,12 @@ body::-webkit-scrollbar-track {
   .menu {
     position: absolute;
   }
-
+}
+@media screen and (max-width: 960px) {
   .menu-logo {
-    float: left;
-    margin-top: -5%;
-    margin-left: -9%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -55px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -958,6 +1039,9 @@ body::-webkit-scrollbar-track {
     position: relative;
     margin: 0 auto;
     margin-top: -5%;
+    -webkit-transform: scale(0.2) translateX(8vw);
+        -ms-transform: scale(0.2) translateX(8vw);
+            transform: scale(0.2) translateX(8vw);
   }
 }
 #image16 {
