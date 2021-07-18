@@ -1,17 +1,4 @@
 var counter = 1;
-
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementsByTagName("main").style.top = "50px";
-    alert("oi")
-  } else {
-    document.getElementsByTagName("main").style.top = "0";
-  }
-  prevScrollpos = currentScrollPos;
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   var tl = gsap.timeline();
 
