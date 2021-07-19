@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 $(document).ready(function () {
-  $(".menu-logo").on("click", function(){
+  $(".menu-logo, .logo-menu").on("click", function(){
     $(".menu-left").toggleClass("active")
     $(".menu-right").toggleClass("active")
     $(".menu").toggleClass("active")

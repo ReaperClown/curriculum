@@ -896,6 +896,10 @@ header {
   padding: 48px 16px;
 }
 
+.logo-menu {
+  display: none;
+}
+
 @media screen and (max-width: 960px) {
   .menu.active {
     -webkit-box-align: center;
@@ -914,7 +918,7 @@ header {
     padding: inherit;
     z-index: 1;
     background: rgba(22, 21, 21, 0.979);
-    height: 350px;
+    height: 400px;
     position: fixed;
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
@@ -923,19 +927,11 @@ header {
   }
 
   .menu.active .menu-logo {
-    height: 100vh;
+    margin-top: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
-    top: 0;
-    left: 50;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 
   .menu-left.active {
@@ -956,7 +952,7 @@ header {
   }
 
   .menu-left.active a, .menu-right.active a {
-    padding: 12px 0px;
+    padding: 18px 0px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -1016,32 +1012,48 @@ body::-webkit-scrollbar-track {
           filter: invert(0%) sepia(14%) saturate(95%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
-@media screen and (max-width: 768px) {
-  .menu {
-    position: absolute;
-  }
-}
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 426px) and (max-width: 960px) {
   .menu-logo {
+    display: none;
+  }
+
+  .logo-menu {
     display: block;
     margin: 0 auto;
-    margin-top: -55px;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    margin-bottom: -80px;
+  }
+
+  .logo-menu img {
+    -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+            transform: scale(0.4);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu {
+    display: none;
   }
 }
 @media screen and (max-width: 425px) {
   .menu {
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .menu-logo {
-    position: relative;
     margin: 0 auto;
-    margin-top: -5%;
-    -webkit-transform: scale(0.2) translateX(8vw);
-        -ms-transform: scale(0.2) translateX(8vw);
-            transform: scale(0.2) translateX(8vw);
+    display: inline-block;
+    position: absolute;
+    margin-top: -55px;
+    -webkit-transform: scale(0.2) translateX(-10vw);
+        -ms-transform: scale(0.2) translateX(-10vw);
+            transform: scale(0.2) translateX(-10vw);
   }
 }
 #image16 {
