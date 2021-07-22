@@ -270,8 +270,12 @@ main .column-right {
   position: relative;
   float: right;
   margin-bottom: 8px;
-  border: 1px solid rgb(160, 144, 144);
+  /* border: 1px solid rgb(160, 144, 144); */
   transform: scale(0.9, 0.9);
+  box-shadow: 1px 1px 5px  rgb(20, 20, 20);
+}
+#toggleDarkLabel.active {
+  box-shadow: 1px 1px 5px  rgb(255, 255, 255);
 }
 
 .toggleDark {

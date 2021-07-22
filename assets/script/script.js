@@ -118,6 +118,7 @@ $(document).ready(function () {
     $(".skills-content span").toggleClass("active");
     $(".download").toggleClass("active");
     $(".skills-content a img").toggleClass("active");
+    $("#toggleDarkLabel").toggleClass("active");
 
     if ($(this).is(":checked"))
       $("section.main-content").css("box-shadow", "0px 24px 3px -24px #d9e2ee"),
