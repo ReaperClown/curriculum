@@ -188,3 +188,13 @@ a.icon:hover, .lang-switch:hover, .nav-icon:hover {
     opacity: 0.88;
   }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  .download {
+    transform: translateX(-150%);
+    margin-top: 3px;
+  }
+  .nav a {
+    padding: 14px 25px;
+  }
+}

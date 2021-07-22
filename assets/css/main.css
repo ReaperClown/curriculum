@@ -424,6 +424,7 @@ section ul li strong {
   margin-right: 20px;
   display: inline;
   padding: 0;
+  padding-bottom: 2px;
 }
 .skills-content span {
   display: inline-block;
@@ -676,5 +677,20 @@ section ul li strong {
   }
   .skills-content a {
     margin-left: -20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1038px) {
+  .SNS-list {
+    display: flex;
+  }
+  .SNS-list-item a {
+    padding: 0;
+  }
+  .SNS-list-item span {
+    padding: 1px 1px;
+  }
+  .me {
+    transform: translateY(-3px);
   }
 }
