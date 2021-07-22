@@ -61,14 +61,14 @@ $(document).ready(function () {
   var counter = 1;
 $(".lang-switch").click(function () {
   if (counter == 1) {
-    $(".pt").css("display", "none")
-    $(".en").css("display", "block")
+    $(".pt").addClass("fade").css("display", "none")
+    $(".en").addClass("fade").css("display", "block")
     document.title = "Resumé - Willian Mesquita"
 
     counter = 2;
   } else if (counter == 2) {
-    $(".en").css("display", "none")
-    $(".pt").css("display", "block")
+    $(".en").addClass("fade").css("display", "none")
+    $(".pt").addClass("fade").css("display", "block")
     document.title = "Currículo - Willian Mesquita"
 
     counter = 1;

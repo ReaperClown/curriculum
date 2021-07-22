@@ -1,9 +1,9 @@
 var counter = 1;
+
 const toggleButton = document.getElementsByClassName('main-logo')[0]
 const navbar = document.getElementsByClassName('menu')[0]
 const navbarLeft = document.getElementsByClassName('menu-left')[0]
 const navbarRight = document.getElementsByClassName('menu-right')[0]
-
 
 document.addEventListener('DOMContentLoaded', () => {
   var tl = gsap.timeline();
@@ -89,6 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 $(document).ready(function () {
+
+  
+    
   $(".menu-logo, .logo-menu").on("click", function(){
     $(".menu-left").toggleClass("active")
     $(".menu-right").toggleClass("active")
@@ -106,10 +109,15 @@ $(document).ready(function () {
     $("main section p").toggleClass("active");
     $(".social").toggleClass("active");
     $(".main-content h2").toggleClass("active");
-    $(".portfolio-formation ul li b").toggleClass("active");
+    $(".portfolio-formation ul li b, .portfolio-formation h4").toggleClass("active");
     $(".portfolio-experience h3").toggleClass("active");
     $(".nav, .nav a").toggleClass("dark-mode");
     $(".nav img.country-us, .nav img.country-br").toggleClass("active");
+    $(".SNS-list-item span").toggleClass("active");
+    $("social.me").toggleClass("active");
+    $(".skills-content span").toggleClass("active");
+    $(".download").toggleClass("active");
+    $(".skills-content a img").toggleClass("active");
 
     if ($(this).is(":checked"))
       $("section.main-content").css("box-shadow", "0px 24px 3px -24px #d9e2ee"),
@@ -118,7 +126,9 @@ $(document).ready(function () {
           "rgba(255, 255, 255, 0.2) 0px 20px 30px"
         ),
         $(".nav.responsive").addClass("dark-mode"),
-        $("#divider").css("box-shadow", "1px 1px 1px 0px #d9e2ee");
+        $("#divider").css("box-shadow", "1px 1px 1px 0px #d9e2ee"),
+        $(".SNS-list-item span").addClass("dark-mode-test"),
+        $(".skills-content span").addClass("dark-test");
 
     else
       $("section.main-content").css("box-shadow", "0px 24px 3px -24px #171718"),
@@ -128,8 +138,9 @@ $(document).ready(function () {
         ),
         $(".nav.responsive").removeClass("dark-mode"),
         $(".nav").removeClass("dark-mode"),
-        $("#divider").css("box-shadow", "1px 1px 1px 0px #141414");
-
+        $("#divider").css("box-shadow", "1px 1px 1px 0px #141414"),
+        $(".SNS-list-item span").removeClass("dark-mode-test"),
+        $(".skills-content span").removeClass("dark-test");
   });
 
   // document.querySelector("label[for=nav-icon] > a")
@@ -142,7 +153,7 @@ $(document).ready(function () {
 
   $(".hover").on("mouseenter", ".names",".roles", function () {
     $(".names h1.name").css("display", "none"),
-    $(".names h1.full-name").css("display", "block", "margin-bottom", "0.3rem")
+    $(".names h1.full-name").css("display", "block", "margin-bottom", "0.3rem"),
     $(".roles h2.main-role").css("display", "none"),
     $(".roles h2.full-role").css("display", "block")
   });

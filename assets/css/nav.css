@@ -8,17 +8,28 @@
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
   box-shadow: 1px 1px 1px rgb(63, 62, 62);
   transition: top 0.3s;
   z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .lang-switch {
   position: relative;
-  width: 50%;
+  width: 80%;
+}
+.download {
+  display: inline-block;
+  position: fixed;
+  font-size: 1.6rem;
+  transform: translateY(10%);
+  cursor: pointer;
+  color: rgb(29, 27, 27);
+}
+.download.active {
+  color: #ddd;
 }
 
 .nav.dark-mode{
@@ -169,5 +180,11 @@ a.icon:hover, .lang-switch:hover, .nav-icon:hover {
     box-shadow: 1px 1px 1px 0px #141414;
     height: 1px;
     padding: 0;
+  }
+  .download {
+    position: absolute;
+    left: 8%;
+    top: 0;
+    opacity: 0.88;
   }
 }
