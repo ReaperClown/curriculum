@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -270,6 +271,67 @@ h6 {
             transform: translate(0%, -15%) rotate(45deg);
   }
 }
+.social-list {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.social-list-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 25px;
+}
+
+.social-list-item:hover > span {
+  opacity: 1;
+}
+
+.social-list-item span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  background: -o-linear-gradient(225deg, #00ffd5 30%, #32fa00 100%);
+  background: linear-gradient(225deg, #00ffd5 30%, #32fa00 100%);
+  padding: 2px 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  font-size: 0.86rem;
+  -webkit-transition: 0.6s opacity;
+  -o-transition: 0.6s opacity;
+  transition: 0.6s opacity;
+  opacity: 0;
+  font-family: "Audiowide", cursive;
+}
+
+.social-list-item span::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -3px;
+  background: -o-linear-gradient(225deg, #00ffd5 30%, #32fa00 100%);
+  background: linear-gradient(225deg, #00ffd5 30%, #32fa00 100%);
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+}
+
+.social-list-item img {
+  width: 100%;
+  max-width: 25px;
+}
+
+.social-list-item img:hover {
+  -webkit-filter: invert(72%) sepia(999%) saturate(400%) hue-rotate(80deg) brightness(115%) contrast(116%);
+          filter: invert(72%) sepia(999%) saturate(400%) hue-rotate(80deg) brightness(115%) contrast(116%);
+}
+
 body {
   width: 100%;
   background-color: #050607;
