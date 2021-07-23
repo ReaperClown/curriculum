@@ -4,10 +4,7 @@
   height: 50px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 0.1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-columns: 1.5fr 0.1fr;
   box-shadow: 1px 1px 1px rgb(63, 62, 62);
   transition: top 0.3s;
   z-index: 1;
@@ -18,15 +15,18 @@
 
 .lang-switch {
   position: relative;
-  width: 80%;
+  width: 50px;
 }
 .download {
-  display: inline-block;
+  margin-left: 89%;
   position: fixed;
   font-size: 1.6rem;
-  transform: translateY(10%);
+  margin-top: -1px;
+  /* transform: translateX(1500%); */
   cursor: pointer;
   color: rgb(29, 27, 27);
+  padding: 5px 15px;
+  z-index: 1010;
 }
 .download.active {
   color: #ddd;
@@ -182,19 +182,31 @@ a.icon:hover, .lang-switch:hover, .nav-icon:hover {
     padding: 0;
   }
   .download {
-    position: absolute;
-    left: 8%;
-    top: 0;
-    opacity: 0.88;
+    float: left;
+    width: 50px;
+    margin: 0 auto;
+    margin-left: 15px;
+    display: none;
+  }
+  .nav.responsive .download {
+    display: block;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1100px) {
   .download {
-    transform: translateX(-150%);
-    margin-top: 3px;
+    display: block;
+    left: 86%;
+    width: 50px;
+    margin: 0 auto;
   }
   .nav a {
     padding: 14px 25px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .download {
+    left: 80%;
   }
 }
