@@ -114,6 +114,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(document).ready(function () {
 
+  $(".menu-logo, .logo-menu").on("click", function () {
+    $(".menu-left").toggleClass("active");
+    $(".menu-right").toggleClass("active");
+    $(".menu").toggleClass("active");
+    $(".main-logo").css("animation", "none");
+  });
+
   const main = document.querySelector('main');
   const x = window.matchMedia("(min-width: 601px)");
   const y = window.matchMedia("(max-width: 600px)");
@@ -160,17 +167,6 @@ $(document).ready(function () {
 $("#backTop").click(function() {
   main.scrollTop = 0;
 });
-
-
-  $(".menu-logo, .logo-menu").on("click", function () {
-    $(".menu-left").toggleClass("active");
-    $(".menu-right").toggleClass("active");
-    $(".menu").toggleClass("active");
-    $(".main-logo").css("animation", "none");
-
-    // navbarLeft.classList.toggle('active')
-    // navbarRight.classList.toggle('active')
-  });
 
   $(".toggleDark").click(function () {
     $("body").toggleClass("active");
