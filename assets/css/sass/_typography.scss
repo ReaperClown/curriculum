@@ -289,3 +289,7 @@ h6 {
 .social-list-item img:hover {
   filter: invert(72%) sepia(999%) saturate(400%) hue-rotate(80deg) brightness(115%) contrast(116%);
 }
+
+.whats {
+  filter: brightness(0) invert(1);
+}

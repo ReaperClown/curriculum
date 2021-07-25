@@ -1,10 +1,12 @@
 var lang_counter = 1;
+
 var dictionary = {
   "change-lang-to": {
     "pt-br": "Desenvolvedor Front-End",
     "en": "Front-End Developer",
   },
 };
+
 var langs = ["pt-br", "en", "sobre", "about"];
 var current_lang_index = 0;
 var current_lang = langs[current_lang_index];
@@ -30,6 +32,7 @@ function translate() {
         $(".roles h2.full-role").css("display", "block"),
         $(".roles h2.full-role-en").css("display", "none");
     });
+
     $(".hover").on("mouseleave", ".names", ".roles", function () {
       $(".roles h2.main-role").css("display", "block"),
         $(".roles h2.full-role").css("display", "none"),
@@ -37,6 +40,7 @@ function translate() {
     });
 
     lang_counter = 2;
+
   } else if (lang_counter == 2) {
     $(".roles h2.full-role").css("display", "none");
 
@@ -45,6 +49,7 @@ function translate() {
           $(".roles h2.full-role").css("display", "none"),
           $(".roles h2.full-role-en").css("display", "block");
       });
+      
       $(".hover").on("mouseleave", ".names", ".roles", function () {
         $(".roles h2.main-role").css("display", "block"),
           $(".roles h2.full-role").css("display", "none"),
@@ -64,12 +69,14 @@ $(".lang-switch").click(function () {
     $(".pt").addClass("fade").css("display", "none")
     $(".en").addClass("fade").css("display", "block")
     document.title = "Resumé - Willian Mesquita"
+    $('#backTop').prop('title', 'Back to top');
 
     counter = 2;
   } else if (counter == 2) {
     $(".en").addClass("fade").css("display", "none")
     $(".pt").addClass("fade").css("display", "block")
     document.title = "Currículo - Willian Mesquita"
+    $('#backTop').prop('title', 'Voltar ao topo');
 
     counter = 1;
   }

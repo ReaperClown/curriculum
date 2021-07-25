@@ -1,11 +1,11 @@
 .nav {
   overflow: hidden;
-  background: linear-gradient(180deg, rgb(167, 162, 162) 50%, rgb(146, 146, 146) 100%);
+  background: linear-gradient(180deg, rgba(167, 162, 162, 0.418) 50%, rgba(146, 146, 146, 0.411) 100%);
   height: 50px;
   width: 100%;
   display: grid;
   grid-template-columns: 1.5fr 0.1fr;
-  box-shadow: 1px 1px 1px rgb(63, 62, 62);
+  box-shadow: 6px 1px 6px 1px rgb(63, 62, 62);
   transition: top 0.3s;
   z-index: 1;
   position: fixed;
@@ -32,8 +32,13 @@
   color: #ddd;
 }
 
-.nav.dark-mode{
-  background: linear-gradient(180deg, rgb(24, 23, 23) 50%, rgb(65, 63, 63) 100%);
+.nav.dark-mode {
+  background: linear-gradient(180deg, rgba(31, 30, 30, 0.61) 1%, rgba(39, 38, 38, 0.719) 99%);
+  box-shadow: 6px 1px 6px 0px rgba(190, 187, 187, 0.781);
+}
+.test {
+  background: linear-gradient(180deg, rgba(31, 30, 30, 0.61) 1%, rgba(39, 38, 38, 0.719) 99%);
+  box-shadow: none;
 }
 
 .nav a {

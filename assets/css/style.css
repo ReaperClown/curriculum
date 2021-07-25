@@ -332,6 +332,11 @@ h6 {
           filter: invert(72%) sepia(999%) saturate(400%) hue-rotate(80deg) brightness(115%) contrast(116%);
 }
 
+.whats {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
 body {
   width: 100%;
   background-color: #050607;
