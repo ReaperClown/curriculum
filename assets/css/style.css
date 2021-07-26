@@ -337,6 +337,26 @@ h6 {
           filter: brightness(0) invert(1);
 }
 
+@media screen and (max-width: 500px) {
+  .mail {
+    font-size: 2rem;
+  }
+
+  .social-list-item {
+    padding: 0;
+  }
+
+  .social-list-item img {
+    width: 20px;
+    max-width: 20px;
+  }
+
+  .social-list-item span {
+    padding: 2px 2px;
+    margin: 2px 0;
+    font-size: 0.57rem;
+  }
+}
 body {
   width: 100%;
   background-color: #050607;
