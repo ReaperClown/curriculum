@@ -1131,16 +1131,24 @@ body::-webkit-scrollbar-track {
     position: relative;
     padding: 0;
     margin: 0 auto;
+    display: block;
   }
 
   .menu-logo {
     margin: 0 auto;
-    display: inline-block;
+    display: block;
     position: absolute;
     margin-top: -55px;
-    -webkit-transform: scale(0.2) translateX(-10vw);
-        -ms-transform: scale(0.2) translateX(-10vw);
-            transform: scale(0.2) translateX(-10vw);
+  }
+
+  .main-logo {
+    margin: 0 auto;
+    display: block;
+  }
+
+  #image16 {
+    margin: 0 auto;
+    display: block;
   }
 }
 #image16 {
@@ -1391,6 +1399,18 @@ body::-webkit-scrollbar-track {
   opacity: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .img-works {
+    max-width: 600px;
+    left: 40%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .img-works {
+    max-width: 380px;
+    left: 34%;
+  }
+}
 .contact {
   max-width: 1200px;
   margin: 0 auto;

@@ -154,13 +154,21 @@ body::-webkit-scrollbar-track {
     position: relative;
     padding: 0;
     margin: 0 auto;
+    display: block;
   }
   .menu-logo {
     margin: 0 auto;
-    display: inline-block;
+    display: block;
     position: absolute;
     margin-top: -55px;
-    transform: scale(0.2) translateX(-10vw);
+  }
+  .main-logo {
+    margin: 0 auto;
+    display: block;
+  }
+  #image16 {
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -318,6 +326,7 @@ body::-webkit-scrollbar-track {
   .svg-hero {
     transform: scale(1.5) rotate(25deg);
   }
+  
 }
 
 .divider {
@@ -363,6 +372,21 @@ body::-webkit-scrollbar-track {
 
   transform: translate(-50%, -50%) translate3d(-2500px,0,0) skewX(30deg);
   opacity: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .img-works {
+    max-width: 600px;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .img-works {
+    max-width: 380px;
+    left: 34%;
+  }
 }
 
 .contact {
