@@ -1038,7 +1038,8 @@ header {
     grid-row-gap: 0px;
   }
 
-  .menu-left.active a, .menu-right.active a {
+  .menu-left.active a,
+.menu-right.active a {
     padding: 18px 0px;
   }
 }
@@ -1128,7 +1129,8 @@ body::-webkit-scrollbar-track {
 }
 @media screen and (max-width: 425px) {
   .menu {
-    position: relative;
+    position: absolute;
+    z-index: 1;
     padding: 0;
     margin: 0 auto;
     display: block;
@@ -1138,8 +1140,8 @@ body::-webkit-scrollbar-track {
   .menu-logo {
     margin: 0 auto;
     display: block;
-    position: absolute;
-    margin-top: -55px;
+    position: relative;
+    margin-top: -60px;
   }
 
   .main-logo {
@@ -1150,6 +1152,10 @@ body::-webkit-scrollbar-track {
   #image16 {
     margin: 0 auto;
     display: block;
+  }
+
+  .container-item:nth-child(1) {
+    margin-top: 60px !important;
   }
 }
 #image16 {

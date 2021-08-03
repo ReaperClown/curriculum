@@ -51,7 +51,8 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
-  .menu-left.active a, .menu-right.active a {
+  .menu-left.active a,
+  .menu-right.active a {
     padding: 18px 0px;
   }
 }
@@ -151,7 +152,8 @@ body::-webkit-scrollbar-track {
 
 @media screen and (max-width: 425px) {
   .menu {
-    position: relative;
+    position: absolute;
+    z-index: 1;
     padding: 0;
     margin: 0 auto;
     display: block;
@@ -160,8 +162,8 @@ body::-webkit-scrollbar-track {
   .menu-logo {
     margin: 0 auto;
     display: block;
-    position: absolute;
-    margin-top: -55px;
+    position: relative;
+    margin-top: -60px;
   }
   .main-logo {
     margin: 0 auto;
@@ -170,6 +172,9 @@ body::-webkit-scrollbar-track {
   #image16 {
     margin: 0 auto;
     display: block;
+  }
+  .container-item:nth-child(1) {
+    margin-top: 60px !important;
   }
 }
 
@@ -327,7 +332,6 @@ body::-webkit-scrollbar-track {
   .svg-hero {
     transform: scale(1.5) rotate(25deg);
   }
-  
 }
 
 .divider {
@@ -352,7 +356,7 @@ body::-webkit-scrollbar-track {
     }
     &:hover {
       & + .img-works {
-        transform: translate(-50%, -50%) translate3d(0,0,0);
+        transform: translate(-50%, -50%) translate3d(0, 0, 0);
         opacity: 0.8;
         margin-left: 70px;
       }
@@ -371,10 +375,9 @@ body::-webkit-scrollbar-track {
   transition: 1s ease;
   z-index: -1;
 
-  transform: translate(-50%, -50%) translate3d(-2500px,0,0) skewX(30deg);
+  transform: translate(-50%, -50%) translate3d(-2500px, 0, 0) skewX(30deg);
   opacity: 0;
 }
-
 
 @media screen and (max-width: 768px) {
   .img-works {
