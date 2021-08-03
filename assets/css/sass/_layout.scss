@@ -176,6 +176,37 @@ body::-webkit-scrollbar-track {
   .container-item:nth-child(1) {
     margin-top: 60px !important;
   }
+
+  .menu.active {
+    transform: inherit;
+    margin: 0 auto;
+  }
+  .menu.active .menu-logo {
+    margin-top: 250px;
+    display: block;
+    position: absolute;
+  }
+  .menu-left.active {
+    display: grid;
+    grid-template-columns: repeat(1, 0.1fr);
+    grid-template-rows: repeat(1, 0.1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 25px;
+  }
+  .menu-right.active {
+    display: grid;
+    grid-template-columns: repeat(1, 0.1fr);
+    grid-template-rows: repeat(1, 0.1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .menu-left.active a,
+  .menu-right.active a {
+    padding: 18px 0px;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 #image16 {
